@@ -3,7 +3,7 @@ WORKDIR /app
 
 # copy csproj and restore as distinct layers
 RUN ls
-COPY FilterModule/*.csproj ./dotnetapp/
+COPY *.csproj ./dotnetapp/
 RUN dotnet restore
 
 # copy and build everything else
