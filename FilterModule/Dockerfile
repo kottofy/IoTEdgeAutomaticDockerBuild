@@ -1,24 +1,18 @@
 FROM microsoft/dotnet:2.0-sdk AS build
-RUN ls
-
 WORKDIR /app
-RUN ls
 
 # copy csproj and restore as distinct layers
-COPY /FilterModule/FilterModule.csproj ./FilterModule/
 RUN ls
+COPY FilterModule/*.csproj ./dotnetapp/
 RUN dotnet restore
 
 # copy and build everything else
-COPY /FilterModule/. ./FilterModule/
-RUN ls
-RUN dotnet build
+COPY . .
+WORKDIR /app/dotnetapp
+RUN dotnet publish -c Release -o out
 
-WORKDIR /app/FilterModule
-RUN ls
-RUN dotnet publish -o out
 
 FROM microsoft/dotnet:2.0-runtime AS runtime
 WORKDIR /app
-COPY --from=publish /app/FilterModule/out ./
-ENTRYPOINT ["dotnet", "FilterModule.dll"]
+COPY --from=build /app/dotnetapp/out ./
+ENTRYPOINT ["dotnet", "dotnetapp.dll"]
