@@ -1,14 +1,16 @@
 FROM microsoft/dotnet:2.0-sdk AS build
+RUN ls
+
 WORKDIR /app
 RUN ls
 
 # copy csproj and restore as distinct layers
-COPY FilterModule/*.csproj ./FilterModule/
+COPY /FilterModule/FilterModule.csproj ./FilterModule/
 RUN ls
 RUN dotnet restore
 
 # copy and build everything else
-COPY FilterModule/. ./FilterModule/
+COPY /FilterModule/. ./FilterModule/
 RUN ls
 RUN dotnet build
 
