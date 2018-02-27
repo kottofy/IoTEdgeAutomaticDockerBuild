@@ -2,7 +2,7 @@ FROM microsoft/dotnet:2.0.0-runtime-stretch AS build
 WORKDIR /app
 
 # copy csproj and restore as distinct layers
-COPY FilterModule/*.csproj ./FilterModule/
+COPY /FilterModule/*.csproj ./FilterModule/
 RUN dotnet restore
 
 # copy and build everything else
