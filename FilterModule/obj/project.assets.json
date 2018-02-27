@@ -7635,11 +7635,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\krottofy\\OneDrive\\Projects\\IoT\\Samples\\iot_edge\\IoTEdgeSamples\\FilterModule\\FilterModule.csproj",
+      "projectUniqueName": "c:\\Users\\krottofy\\OneDrive\\Projects\\IoT\\Samples\\iot_edge\\IoTEdgeSamples\\FilterModule\\FilterModule.csproj",
       "projectName": "FilterModule",
-      "projectPath": "C:\\Users\\krottofy\\OneDrive\\Projects\\IoT\\Samples\\iot_edge\\IoTEdgeSamples\\FilterModule\\FilterModule.csproj",
+      "projectPath": "c:\\Users\\krottofy\\OneDrive\\Projects\\IoT\\Samples\\iot_edge\\IoTEdgeSamples\\FilterModule\\FilterModule.csproj",
       "packagesPath": "C:\\Users\\krottofy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\krottofy\\OneDrive\\Projects\\IoT\\Samples\\iot_edge\\IoTEdgeSamples\\FilterModule\\obj\\",
+      "outputPath": "c:\\Users\\krottofy\\OneDrive\\Projects\\IoT\\Samples\\iot_edge\\IoTEdgeSamples\\FilterModule\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
