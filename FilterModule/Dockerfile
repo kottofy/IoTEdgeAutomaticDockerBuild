@@ -9,7 +9,7 @@ RUN dotnet restore
 
 # copy and build everything else
 COPY FilterModule/. ./FilterModule/
-RUN layers
+RUN ls
 RUN dotnet build
 
 WORKDIR /app/FilterModule
