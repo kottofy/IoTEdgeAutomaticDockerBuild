@@ -2,15 +2,13 @@ FROM microsoft/dotnet:2.0-sdk AS build
 WORKDIR /app
 
 # copy csproj and restore as distinct layers
-RUN ls
-COPY *.csproj ./dotnetapp/
+COPY FilterModule/*.csproj ./dotnetapp/
 RUN dotnet restore
 
 # copy and build everything else
 COPY . .
 WORKDIR /app/dotnetapp
 RUN dotnet publish -c Release -o out
-
 
 FROM microsoft/dotnet:2.0-runtime AS runtime
 WORKDIR /app
