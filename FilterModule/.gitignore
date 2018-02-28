@@ -1,4 +1,6 @@
 .vscode
+obj
+bin
 
 # .NET Core
 project.lock.json
